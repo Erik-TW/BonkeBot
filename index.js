@@ -38,6 +38,10 @@ client.on('message', msg => {
             index = Math.floor(Math.random() * (playlists.travel.length));
             msg.channel.send(`/play ${playlists.travel[index]}`);
             break;
+        case identifier + 'campfire':
+            index = Math.floor(Math.random() * (playlists.campfire.length));
+            msg.channel.send(`/play ${playlists.campfire[index]}`);
+            break;
   }
 });
 
@@ -69,9 +73,10 @@ const help = () => {
     identifier + 'city \n ' + 
     identifier + 'combat \n '  + 
     identifier + 'travel \n ' +
-    identifier + 'tavern \n '
+    identifier + 'tavern \n ' +
+    identifier + 'campfire \n '
+
 
 }
-
 
 client.login(process.env.DISCORD_KEY);
